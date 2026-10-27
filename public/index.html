@@ -1,0 +1,144 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#f2f1ed"><meta name="description" content="禾予种草助手，让灵感自由成形。生成小红书笔记、口播、配图与视频。"><title>禾予 · 种草助手</title><link rel="icon" href="./favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="./liquid.css"><link rel="stylesheet" href="./creation.css"><script type="module" src="./liquid.js"></script><script type="module" src="./app.js"></script></head><body><div id="heyu-liquid-letters" aria-label="禾予种草助手">
+
+<header class="l-nav"><button type="button" class="l-brand cursor-interaction" aria-label="禾予首页"><span class="l-monogram" aria-hidden="true"></span><span><strong>禾予</strong><small>种草助手</small></span></button><span class="l-navnote">IDEAS DON'T STAND STILL.</span><button type="button" class="l-enter cursor-interaction" data-enter>进入创作 <span>↗</span></button></header>
+<section class="l-home">
+<div class="l-stage">
+<div class="l-canvaswrap" aria-label="液态雕塑"><div class="l-shadow"></div><canvas aria-label="可交互液态金属模型，移动鼠标使表面形变，拖动旋转，点击激起波纹。也可使用下方涟漪按钮。" role="img"></canvas><div class="l-orb-fallback" hidden>H</div></div>
+<div class="l-copy"><p class="l-kicker"><span class="l-dot"></span>GOOD IDEAS TAKE SHAPE</p><h1><span>让灵感</span><span class="l-second">自由成形</span></h1><p class="l-sub">每一个好产品，都有流动的可能。<br>把一瞬灵感，变成让人停留的内容。</p><button type="button" class="l-cta cursor-interaction" data-enter>开始创作 <span>↗</span></button></div>
+<div class="l-object-note"><b>Fluid / H</b>灵感，没有固定形状。</div>
+</div>
+<footer class="l-bottom"><p class="l-hint">移动 · 触碰 · 拖动，让灵感回应你</p><div class="l-controls"><div class="l-shapes" aria-label="液态字形"><button class="cursor-interaction" type="button" data-shape="H" aria-pressed="true" aria-label="字形 H">H</button><button class="cursor-interaction" type="button" data-shape="Y" aria-pressed="false" aria-label="字形 Y">Y</button></div><button type="button" class="cursor-interaction" data-material aria-label="切换液态材质"><span class="l-swatch"></span><span data-material-name>液态银</span></button><span class="l-sep"></span><button type="button" class="cursor-interaction" data-ripple>激起涟漪 ↗</button><button type="button" class="cursor-interaction" data-pause aria-pressed="false">Ⅱ 暂停</button></div></footer>
+</section>
+<section class="l-creation" hidden aria-labelledby="create-heading">
+<button type="button" class="l-back cursor-interaction">← 返回液态首页</button>
+<p class="l-kicker">YOUR CREATIVE SPACE</p><h2 id="create-heading" tabindex="-1">给灵感，一个方向。</h2>
+<p>从商品和目标人群开始，让表达慢慢成形。</p>
+<div class="creative-grid"><section class="brief-panel" aria-label="创作需求"><form id="brief-form">
+            <fieldset id="form-fields">
+              <div class="form-row">
+                <div class="field">
+                  <label for="product">商品</label
+                  ><select name="product" id="product">
+                    <option>T20 Pro 月白</option>
+                    <option>T20 Pro 曜石黑</option>
+                    <option>T10 月白</option>
+                    <option>S1 Max 标准版</option>
+                    <option>S1 Max 上下水版</option>
+                  </select>
+                </div>
+                <div class="field campaign-field">
+                  <label for="campaign">活动</label
+                  ><input
+                    id="campaign"
+                    name="campaign"
+                    value="双 11"
+                    maxlength="20"
+                    placeholder="例如：双 11"
+                  />
+                </div>
+              </div>
+              <div class="field">
+                <div class="label-row">
+                  <label for="audience"
+                    >目标人群 <span class="required">*</span></label
+                  ><span id="audience-count" class="count">0 / 60</span>
+                </div>
+                <textarea
+                  id="audience"
+                  name="audience"
+                  rows="3"
+                  required
+                  aria-describedby="audience-hint audience-count"
+                  placeholder="例如：养猫的上班族，想省下打扫时间，也在意地板上的毛发。"
+                ></textarea>
+                <p class="field-hint" id="audience-hint">
+                  写清楚「谁会用」和「在意什么」，内容更有共鸣。
+                </p>
+              </div>
+              <div class="field">
+                <label for="want">要什么</label
+                ><select id="want" name="want">
+                  <option>文案 + 配图 + 视频</option>
+                  <option>文案 + 配图</option>
+                  <option>只要文案</option>
+                </select>
+              </div>
+              <div class="field">
+                <div class="label-row">
+                  <label for="shot"
+                    >视频镜头要求 <span class="optional">选填</span></label
+                  ><span id="shot-count" class="count">0 / 500</span>
+                </div>
+                <textarea
+                  id="shot"
+                  name="shot"
+                  rows="3"
+                  aria-describedby="shot-count"
+                  placeholder="例如：明亮的客厅，先拍猫毛和碎屑，再展示清洁过程；节奏轻快，突出省心。"
+                ></textarea>
+              </div>
+              <div class="field access-field">
+                <label for="access-code"
+                  >口令 <span class="required">*</span></label
+                >
+                <div class="password-wrap">
+                  <input
+                    type="password"
+                    id="access-code"
+                    name="access"
+                    required
+                    autocomplete="off"
+                    maxlength="256"
+                    placeholder="输入访问口令"
+                  /><button
+                    id="toggle-password"
+                    class="password-toggle"
+                    type="button"
+                    aria-label="显示口令"
+                    aria-pressed="false"
+                  >
+                    显示
+                  </button>
+                </div>
+              </div>
+              <button class="generate-button" id="generate" type="submit">
+                <span aria-hidden="true">✳</span><span>生成</span
+                ><span aria-hidden="true">↗</span>
+              </button>
+            </fieldset>
+            <p class="form-footnote">每个 IP 每 10 分钟最多生成 6 次</p>
+          </form></section><section class="output-panel" aria-labelledby="output-heading">
+          <div class="output-header">
+            <div>
+              <span class="step-label">02 / CREATION</span>
+              <h2 id="output-heading">你的种草素材</h2>
+            </div>
+            <span id="state-badge" class="state-badge">等待灵感</span>
+          </div>
+          <div id="notice" class="notice" role="alert" hidden></div>
+          <div id="progress" class="progress-panel" hidden>
+            <div class="progress-heading">
+              <span class="spinner" aria-hidden="true"></span
+              ><strong id="progress-title">正在提交你的创作需求</strong
+              ><span class="elapsed">已等 <b id="elapsed">0</b> 秒</span>
+            </div>
+            <div class="progress-track" aria-hidden="true"><span></span></div>
+            <p id="progress-detail">通常需要一些时间，最长等待 6 分钟。</p>
+          </div>
+          <div id="empty-state" class="empty-state">
+<p class="empty-kicker">WAITING FOR YOUR IDEA</p><div class="empty-mark" aria-hidden="true">H / Y</div>
+<h3>故事的下一页，<br>从你的灵感开始。</h3><p>填好需求，点击「生成」。<br>通过审核后，文案与视觉素材将在这里呈现。</p>
+<div class="output-types"><span>小红书笔记</span><span>抖音口播</span><span>详情页首屏</span></div></div>
+<div id="results" class="results" aria-live="polite"></div>
+          <div id="run-info" class="run-info" hidden>
+            <span id="run-id"></span
+            ><button type="button" id="check-result" class="text-button" hidden>
+              再查一次结果 ↗
+            </button>
+          </div>
+        </section></div></section>
+<span class="l-sr" role="status" aria-live="polite"></span>
+
+</div>
+
+</body></html>
