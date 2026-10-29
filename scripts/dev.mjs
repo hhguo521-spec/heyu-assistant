@@ -15,6 +15,7 @@ const types = {
   "/workflow.js": "text/javascript",
   "/runtime-config.js": "text/javascript",
   "/favicon.svg": "image/svg+xml",
+  "/editorial-hero.jpg": "image/jpeg",
 };
 const server = http.createServer(async (req, res) => {
   for (const { key, value } of config.headers[0].headers) res.setHeader(key, value);

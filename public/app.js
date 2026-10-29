@@ -148,6 +148,7 @@ function render(data) {
   const result = parseOutputs(data.outputs);
   $("empty-state").hidden = true;
   $("results").replaceChildren();
+  $("review-reminder").hidden = result.verdict !== "自动通过";
   if (result.verdict === "转人工") {
     badge("转人工", "warning");
     const section = card("这次内容需要人工复核", "REVIEW");
@@ -229,7 +230,7 @@ form.addEventListener("submit", async (event) => {
   const inputs = Object.fromEntries(
     ["product", "campaign", "audience", "want", "shot"].map((key) => [
       key,
-      values.get(key).trim(),
+      (values.get(key) ?? "").trim(),
     ]),
   );
   if (!inputs.audience) {
@@ -244,6 +245,7 @@ form.addEventListener("submit", async (event) => {
   notice();
   badge("正在生成", "busy");
   $("results").replaceChildren();
+  $("review-reminder").hidden = true;
   $("empty-state").hidden = false;
   $("empty-state").classList.add("compact");
   $("progress").hidden = false;
@@ -278,7 +280,7 @@ form.addEventListener("submit", async (event) => {
       throw new Error("没有收到任务编号，请先查看 Dify 运行记录。");
     lastId = id;
     $("run-info").hidden = false;
-    $("run-id").textContent = `任务编号：${id}`;
+    $("run-id").textContent = `任务编号：${id}（请勿刷新页面，以便稍后查询）`;
     $("progress-title").textContent = "灵感正在长成素材";
     $("progress-detail").textContent =
       "每 5 秒查询一次；图片和视频可能需要更久，最长等待 6 分钟。";

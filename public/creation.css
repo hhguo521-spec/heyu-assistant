@@ -78,3 +78,21 @@
 @media(max-width:900px){#heyu-liquid-letters .creative-grid{grid-template-columns:1fr;gap:48px}#heyu-liquid-letters .l-creation{max-width:820px}#heyu-liquid-letters .empty-state{padding:20px}#heyu-liquid-letters .output-panel{min-height:350px}}
 @media(max-width:480px){#heyu-liquid-letters .form-row{grid-template-columns:1fr;gap:0}#heyu-liquid-letters .l-creation{padding-left:7%;padding-right:7%}#heyu-liquid-letters .field input,#heyu-liquid-letters .field textarea,#heyu-liquid-letters .field select{padding:14px 16px}#heyu-liquid-letters .password-wrap input{padding-right:76px}#heyu-liquid-letters .result-card{padding:18px}#heyu-liquid-letters .progress-heading{gap:8px}}
 @media(prefers-reduced-motion:reduce){#heyu-liquid-letters .spinner,#heyu-liquid-letters .progress-track span{animation:none}#heyu-liquid-letters .field input,#heyu-liquid-letters .field select,#heyu-liquid-letters .field textarea{transition:none}}
+/* Editorial studio layout */
+#heyu-liquid-letters{--paper:#f2efe7;--ink:#20221e;--soft:#6c7067;--line:#d8d8cf;--acid:#ec543b;color-scheme:light}
+#heyu-liquid-letters .creative-grid{grid-template-columns:minmax(0,1fr) minmax(0,.95fr);gap:24px;margin-top:32px}
+#heyu-liquid-letters .brief-panel,#heyu-liquid-letters .output-panel{background:#faf9f4;border:1px solid #dfdfd5;border-radius:10px;padding:30px;min-width:0}
+#heyu-liquid-letters .output-panel{min-height:620px;position:sticky;top:24px}
+#heyu-liquid-letters .output-header{border-bottom:1px solid #e2dfd5;padding-bottom:24px}
+#heyu-liquid-letters .field label{font-weight:600}
+#heyu-liquid-letters .field input,#heyu-liquid-letters .field select,#heyu-liquid-letters .field textarea{background:#f4f3ee;border:1px solid #d7d8d0;border-radius:5px}
+#heyu-liquid-letters .field input:focus,#heyu-liquid-letters .field textarea:focus,#heyu-liquid-letters .field select:focus{outline:2px solid #303ad1;outline-offset:2px;border-color:#303ad1;box-shadow:none}
+#heyu-liquid-letters .generate-button{color:#fff;background:#e85239;border-radius:5px}
+#heyu-liquid-letters .generate-button:hover{background:#c74330}
+#heyu-liquid-letters .empty-mark{border:1px solid #e2dfd5;background:#f2f0e9;border-radius:50%;width:150px;height:150px;display:grid;place-items:center;margin:30px auto;font-size:46px;letter-spacing:-3px;color:#d65a45}
+#heyu-liquid-letters .output-types span{background:#edeee9;padding:8px 12px;border-radius:30px}
+#heyu-liquid-letters .state-badge{background:#ebeee8;color:#5f6c59}
+@media(max-width:900px){#heyu-liquid-letters .creative-grid{grid-template-columns:1fr}#heyu-liquid-letters .output-panel{position:static;min-height:370px}}
+@media(max-width:480px){#heyu-liquid-letters .brief-panel,#heyu-liquid-letters .output-panel{padding:21px}#heyu-liquid-letters .form-row{grid-template-columns:1fr}}
+
+#heyu-liquid-letters .generate-button{background:#c13d2a}
