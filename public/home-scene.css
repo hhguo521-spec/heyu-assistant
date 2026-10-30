@@ -1,0 +1,40 @@
+/* Each visual space can be explored directly with a drag or swipe. */
+html,body{font-family:'OPPO Sans','PingFang SC',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif}
+.experience{overflow:clip}
+.scene{position:fixed;inset:0;z-index:-1;overflow:hidden;background:#02081b}
+.scene-bg{position:absolute;inset:0;opacity:0;will-change:opacity}
+.scene-bg-0{background:linear-gradient(90deg,rgba(0,7,29,.48) 0%,rgba(0,7,29,.18) 35%,transparent 62%),url("./prism.jpg") center center / cover no-repeat}
+/* Full-bleed optical spaces share the same left-side contrast and layout. */
+.scene-bg-1{background:linear-gradient(90deg,rgba(0,9,25,.62) 0%,rgba(0,9,25,.24) 36%,transparent 62%),url("./scene-ice.png") center / cover no-repeat;background-color:#173d50;filter:hue-rotate(-24deg) saturate(.82) brightness(1.12)}
+.scene-bg-2{background:linear-gradient(90deg,rgba(12,5,32,.66) 0%,rgba(12,5,32,.25) 36%,transparent 62%),url("./scene-violet.png") center / cover no-repeat;background-color:#2b1548}
+.scene-bg-3{background:linear-gradient(90deg,rgba(1,24,22,.66) 0%,rgba(1,24,22,.25) 36%,transparent 62%),url("./scene-jade-v2.png") center / cover no-repeat;background-color:#0c3933}
+.scene-bg-0{opacity:1}#crystal{position:absolute;width:48%;height:90%;left:49%;top:5%;pointer-events:none}#optical{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}.scene-grain{position:absolute;inset:0;pointer-events:none;opacity:.11;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.nav{position:fixed;top:0;left:0;width:100%;height:96px;padding:0 7%;border:0;z-index:6;pointer-events:none}
+.brand{pointer-events:auto;color:white;font-weight:700;font-size:17px;letter-spacing:.22em;line-height:1}.brand-dot{color:#96d4ff;letter-spacing:0}
+.home{height:400vh;min-height:400vh;display:block}.home-sticky{height:100svh;position:sticky;top:0;display:flex;align-items:center}.hero-body{display:block;width:100%;padding:0 7%;text-align:left;pointer-events:none}.hero-body h1{font-family:inherit;font-weight:500;letter-spacing:-.045em;font-size:clamp(43px,4.3vw,70px);line-height:1.13;max-width:48%;margin:0 0 22px;text-shadow:none}.sub{font-size:clamp(13px,1.08vw,16px);line-height:1.75;letter-spacing:.005em;color:#e7efffcc;text-shadow:none}.hero-actions{justify-content:flex-start;margin-top:33px;pointer-events:auto}
+.hero-actions .primary{position:relative;isolation:isolate;overflow:visible;display:flex;align-items:center;justify-content:space-between;gap:44px;min-width:166px;height:54px;padding:0 18px 0 23px;border:1px solid #d7ecff69;border-radius:40px;background:#ffffff19;color:white;backdrop-filter:blur(18px);box-shadow:inset 0 1px 9px #ffffff1e,0 10px 32px #0003;font-size:13px;font-weight:500;transition:background .25s,transform .25s}
+.hero-actions .primary:hover{background:#ffffff30;transform:translateY(-2px)}.hero-actions .primary span,.hero-actions .primary i{position:relative;z-index:2}.hero-actions .primary i{font-size:16px}.specular-button__light{position:absolute;inset:-24px;width:calc(100% + 48px);height:calc(100% + 48px);pointer-events:none;z-index:1}
+.experience.is-studio .nav{position:absolute}.experience.is-studio .scene{opacity:.28}.experience.is-studio .home{display:none}
+@media(max-width:800px){.scene-bg-0{background:linear-gradient(0deg,#02091df2 0%,#02091d14 55%,transparent 75%),url("./prism.jpg") 68% top / auto 65% no-repeat;background-color:#02091d}.nav{height:74px;padding:0 7%}.home-sticky{align-items:flex-end}.hero-body{padding:0 7% 13vh}.hero-body h1{font-size:clamp(37px,8vw,52px);max-width:100%;margin:0 0 16px}.sub{font-size:13px}.hero-actions{margin-top:25px}.scene-bg-1,.scene-bg-2,.scene-bg-3{background-position:center,68% top;background-size:cover,auto 65%;background-repeat:no-repeat}.scene:after{content:'';position:absolute;inset:35% 0 0;background:linear-gradient(0deg,#000815d9,transparent 90%);pointer-events:none}#optical{transform:translateY(-15%)}#crystal{width:90%;height:70%;left:10%;top:0;transform:translateY(-10%)}.experience.is-studio .scene:after{display:none}}
+@media(prefers-reduced-motion:reduce){.hero-actions .primary{transition:none}}
+
+/* A single viewport keeps the words and the artwork in place. */
+.home{height:100svh;min-height:100svh}
+.home-sticky{position:relative;height:100svh;cursor:grab;touch-action:pan-y;user-select:none;-webkit-user-select:none}
+.home-sticky.is-dragging{cursor:grabbing}
+.scene-controls{position:absolute;right:7%;bottom:7%;display:flex;align-items:center;gap:10px;pointer-events:auto}
+.scene-arrow{display:grid;place-items:center;width:38px;height:38px;border:1px solid #fff6;border-radius:50%;color:#fff;background:#08163033;backdrop-filter:blur(12px);font-size:28px;line-height:1;transition:background .2s,opacity .2s;cursor:pointer}
+.scene-arrow:hover{background:#ffffff35}.scene-arrow:disabled{opacity:.3;cursor:default}.scene-arrow:focus-visible{outline:2px solid white;outline-offset:3px}
+@media(max-width:800px){.scene-controls{bottom:4%;right:7%}.scene-arrow{width:36px;height:36px}}
+@media(prefers-reduced-motion:reduce){.scene-arrow{transition:none}}
+
+/* The four rooms form a native vertical scroll journey. */
+.home{height:400svh;min-height:400svh}
+.home-sticky{position:sticky;top:0;height:100svh;cursor:default;touch-action:auto}
+.scene-bg{transform-origin:72% 48%;will-change:transform,opacity}
+#optical{transform:none!important}
+@media(max-width:800px){.scene-bg{transform-origin:68% 32%}}
+
+/* The light layer is visual only; it never captures clicks or scrolling. */
+#interactive-light{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;mix-blend-mode:screen;opacity:.92}
+@media(prefers-reduced-motion:reduce){#interactive-light{display:none}}

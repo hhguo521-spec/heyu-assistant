@@ -1,136 +1,49 @@
-<!doctype html>
-<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#f2efe7"><meta name="description" content="禾予种草助手，为扫地机器人生成种草文案、配图和视频。"><title>禾予 · 种草助手</title><link rel="icon" href="./favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="./liquid.css?v=2"><link rel="stylesheet" href="./creation.css"><script type="module" src="./liquid.js"></script><script type="module" src="./app.js"></script></head>
-<body><div id="heyu-liquid-letters"><a class="skip-link" href="#main-content">跳到主要内容</a>
-<header class="nav"><button class="brand" type="button" data-home aria-label="返回禾予首页"><span class="brand-symbol">禾</span><span class="brand-text"><b>禾予</b><small>种草助手</small></span></button><span class="nav-center">A LITTLE IDEA, A BIG STORY.</span><button class="nav-action" type="button" data-enter>进入创作 <span aria-hidden="true">↗</span></button></header>
-<main id="main-content"><section class="home" aria-labelledby="home-title">
-<div class="hero"><div class="hero-copy"><div class="eyebrow"><span class="red-dot"></span> CREATIVE STUDIO FOR EVERY IDEA</div><h1 id="home-title">让好产品<br><em>被看见</em></h1><p class="hero-desc">为扫地机器人写文案、做配图、生成视频。<br>从一个想法，开始一场有温度的表达。</p><div class="hero-actions"><button class="primary" type="button" data-enter>开始创作 <span aria-hidden="true">↗</span></button><a href="#how-it-works" class="text-link">了解怎么用 <span aria-hidden="true">↓</span></a></div><div class="hero-bottom"><span>为每一个<br>值得分享的瞬间</span><span class="hero-index">01 — 03</span></div></div>
-<div class="hero-art"><img src="./editorial-hero.jpg" alt="" fetchpriority="high"><span class="art-label">IDEAS IN MOTION <span>✳</span></span><span class="art-note">让灵感<br>自然发生</span><span class="art-index">H / 01</span></div></div>
-<div class="ticker" aria-label="可以生成的内容"><span>GOOD IDEAS DESERVE TO BE SEEN</span><b>✳</b><span>小红书笔记</span><b>✳</b><span>抖音口播</span><b>✳</b><span>详情页文案</span><b>✳</b><span>配图与视频</span></div>
-<section class="how" id="how-it-works"><div class="section-top"><span>HOW IT WORKS / 01</span><span>简单开始 · 自由创作</span></div><div class="how-heading"><h2>从想法，<br><em>到一份好内容</em></h2><p>不必从空白开始。选好商品，说清楚想打动谁，把内容交给禾予。</p></div><div class="steps"><article><span>01 / BRIEF</span><h3>说说你的想法</h3><p>选择商品和活动，描述想要触达的人群。</p></article><article><span>02 / CREATE</span><h3>让灵感成形</h3><p>选择文案、配图或视频，等待创作完成。</p></article><article><span>03 / REVIEW</span><h3>核对后分享</h3><p>检查商品信息、价格和画面，再使用素材。</p></article></div><button class="secondary" type="button" data-enter>开始你的创作 <span aria-hidden="true">↗</span></button></section><footer class="site-footer"><b>禾予 <small>种草助手</small></b><span>MADE FOR THE NEXT GOOD IDEA.</span></footer></section>
-<section class="creation" hidden aria-labelledby="create-heading"><div class="create-intro"><button type="button" class="back" data-home>← 返回首页</button><div class="intro-row"><div><div class="eyebrow"><span class="red-dot"></span> YOUR CREATIVE SPACE</div><h2 id="create-heading" tabindex="-1">从一个想法开始</h2><p>填好需求，剩下的交给禾予。</p></div><div class="intro-number">01 / 02</div></div></div>
-<div class="creative-grid"><section class="brief-panel" aria-label="创作需求"><div class="panel-title"><span>01 / 创作需求</span><h3>先给灵感一点方向</h3><p>描述得越具体，生成的内容越贴近你想要的场景。</p></div><form id="brief-form">
-            <fieldset id="form-fields">
-              <div class="form-row">
-                <div class="field">
-                  <label for="product">商品</label
-                  ><select name="product" id="product">
-                    <option>T20 Pro 月白</option>
-                    <option>T20 Pro 曜石黑</option>
-                    <option>T10 月白</option>
-                    <option>S1 Max 标准版</option>
-                    <option>S1 Max 上下水版</option>
-                  </select>
-                </div>
-                <div class="field campaign-field">
-                  <label for="campaign">活动</label
-                  ><input
-                    id="campaign"
-                    name="campaign"
-                    value="双 11"
-                    maxlength="20"
-                    placeholder="例如：双 11"
-                  />
-                </div>
-              </div>
-              <div class="field">
-                <div class="label-row">
-                  <label for="audience"
-                    >目标人群 <span class="required">*</span></label
-                  ><span id="audience-count" class="count">0 / 60</span>
-                </div>
-                <textarea
-                  id="audience"
-                  name="audience"
-                  rows="3"
-                  required
-                  aria-describedby="audience-hint audience-count"
-                  placeholder="例如：养猫的上班族，想省下打扫时间，也在意地板上的毛发。"
-                ></textarea>
-                <p class="field-hint" id="audience-hint">
-                  写清楚「谁会用」和「在意什么」，内容更有共鸣。
-                </p>
-              </div>
-              <div class="field">
-                <label for="want">要什么</label
-                ><select id="want" name="want" aria-describedby="want-hint">
-                  <option>文案 + 配图 + 视频</option>
-                  <option>文案 + 配图</option>
-                  <option>只要文案</option>
-                </select>
-                <p class="field-hint" id="want-hint">将生成文案、配图和视频。</p>
-              </div>
-              <div class="field" id="shot-field">
-                <div class="label-row">
-                  <label for="shot"
-                    >视频镜头要求 <span class="optional">选填</span></label
-                  ><span id="shot-count" class="count">0 / 500</span>
-                </div>
-                <textarea
-                  id="shot"
-                  name="shot"
-                  rows="3"
-                  aria-describedby="shot-count shot-hint"
-                  placeholder="例如：明亮的客厅，先拍猫毛和碎屑，再展示清洁过程；节奏轻快，突出省心。"
-                ></textarea>
-                <p class="field-hint" id="shot-hint">只影响视频镜头，不影响配图。</p>
-              </div>
-              <div class="field access-field">
-                <label for="access-code"
-                  >口令 <span class="required">*</span></label
-                >
-                <div class="password-wrap">
-                  <input
-                    type="password"
-                    id="access-code"
-                    name="access"
-                    required
-                    autocomplete="off"
-                    maxlength="256"
-                    placeholder="输入访问口令"
-                  /><button
-                    id="toggle-password"
-                    class="password-toggle"
-                    type="button"
-                    aria-label="显示口令"
-                    aria-pressed="false"
-                  >
-                    显示
-                  </button>
-                </div>
-              </div>
-              <button class="generate-button" id="generate" type="submit">
-                <span aria-hidden="true">✳</span><span>生成</span
-                ><span aria-hidden="true">↗</span>
-              </button>
-            </fieldset>
-            <p class="form-footnote">每个 IP 每 10 分钟最多生成 6 次 · 提交后请耐心等待</p>
-          </form></section><section class="output-panel" aria-labelledby="output-heading">
-          <div class="output-header">
-            <div>
-              <span class="step-label">02 / CREATION</span>
-              <h2 id="output-heading">你的种草素材</h2>
-            </div>
-            <span id="state-badge" class="state-badge" role="status" aria-live="polite">等待灵感</span>
-          </div>
-          <div id="notice" class="notice" role="alert" hidden></div>
-          <div id="progress" class="progress-panel" hidden>
-            <div class="progress-heading">
-              <span class="spinner" aria-hidden="true"></span
-              ><strong id="progress-title">正在提交你的创作需求</strong
-              ><span class="elapsed">已等 <b id="elapsed">0</b> 秒</span>
-            </div>
-            <div class="progress-track" aria-hidden="true"><span></span></div>
-            <p id="progress-detail">通常需要一些时间，最长等待 6 分钟。</p>
-          </div>
-          <div id="empty-state" class="empty-state">
-<p class="empty-kicker">WAITING FOR YOUR IDEA</p><div class="empty-mark" aria-hidden="true">✳</div>
-<h3>故事的下一页，<br>从你的灵感开始。</h3><p>填好需求，点击「生成」。<br>文案与所选素材将在这里呈现。<br>发布前请人工核对信息和画面。</p>
-<div class="output-types"><span>小红书笔记</span><span>抖音口播</span><span>详情页首屏</span></div></div>
-<div id="review-reminder" class="review-reminder" hidden>发布前，请核对商品信息、价格与图片中的文字或标识。</div><div id="results" class="results" aria-live="polite"></div>
-          <div id="run-info" class="run-info" hidden>
-            <span id="run-id"></span
-            ><button type="button" id="check-result" class="text-button" hidden>
-              再查一次结果 ↗
-            </button>
-          </div>
-        </section></div></section></main><span class="sr-only" role="status" aria-live="polite"></span></div></body></html>
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#390014"><meta name="description" content="禾予种草助手，让灵感成为内容。"><title>禾予 · 灵感实验室</title><link rel="stylesheet" href="style.css?v=2"><link rel="stylesheet" href="home-scene.css?v=7"><link rel="stylesheet" href="studio-journey.css?v=3"><script type="module" src="main.js?v=9"></script><script type="module" src="specular-button.js"></script></head><body><div class="experience" id="experience">
+<div class="scene" aria-hidden="true"><div class="scene-bg scene-bg-0"></div><div class="scene-bg scene-bg-1"></div><div class="scene-bg scene-bg-2"></div><div class="scene-bg scene-bg-3"></div><canvas id="optical"></canvas><canvas id="interactive-light"></canvas><div class="scene-grain"></div></div>
+<header class="nav"><button class="brand" type="button" data-home aria-label="禾予，返回首页">HEYU<span class="brand-dot">.</span></button></header>
+<main><section class="home" aria-labelledby="title"><div class="home-sticky"><div class="hero-body"><h1 id="title">Let inspiration<br>go beyond</h1><p class="sub">Every good idea has the power<br>to make someone stop and look.</p><div class="hero-actions"><button class="primary specular-button" type="button" data-enter><canvas class="specular-button__light" aria-hidden="true"></canvas><span>开始创作</span><i aria-hidden="true">↗</i></button></div></div><div class="scene-controls" role="group" aria-label="切换场景"><button type="button" class="scene-arrow" data-scene-prev aria-label="上一个场景"><span aria-hidden="true">‹</span></button><button type="button" class="scene-arrow" data-scene-next aria-label="下一个场景"><span aria-hidden="true">›</span></button></div></div></section>
+<section class="studio journey" hidden aria-labelledby="studio-heading">
+  <div class="journey-shell">
+    <aside class="journey-side">
+      <button data-home type="button" class="journey-back">← 返回首页</button>
+      <h2 id="studio-heading" tabindex="-1">每个故事<br>都有起点</h2>
+      <p class="journey-intro">从产品到人群，再到表达方式。<br>沿着灵感，完成一次创作探索。</p>
+      <nav class="journey-steps" aria-label="创作步骤">
+        <button type="button" class="journey-step active" data-goto="0"><b>01</b><span>选择产品</span><i></i></button>
+        <button type="button" class="journey-step" data-goto="1"><b>02</b><span>想要打动谁</span><i></i></button>
+        <button type="button" class="journey-step" data-goto="2"><b>03</b><span>选择表达</span><i></i></button>
+        <button type="button" class="journey-step" data-goto="3"><b>04</b><span>创意预览</span><i></i></button>
+      </nav>
+      <p class="journey-disclaimer">文案、配图与视频，从这里开始</p>
+    </aside>
+    <div class="journey-main"><div class="journey-frame"><form id="form" novalidate>
+      <div class="journey-panel" data-panel="0"><div class="journey-copy"><h3>这次，想讲述<br>哪一款产品</h3><p>选择一个商品，再告诉我们它参与的活动。</p></div>
+        <div class="journey-products" role="radiogroup" aria-label="选择商品">
+          <label><input type="radio" name="product" value="T20 Pro 月白" checked><span><b>01</b><strong>T20 Pro</strong><small>月白</small><i>↗</i></span></label>
+          <label><input type="radio" name="product" value="T20 Pro 曜石黑"><span><b>02</b><strong>T20 Pro</strong><small>曜石黑</small><i>↗</i></span></label>
+          <label><input type="radio" name="product" value="T10 月白"><span><b>03</b><strong>T10</strong><small>月白</small><i>↗</i></span></label>
+          <label><input type="radio" name="product" value="S1 Max 标准版"><span><b>04</b><strong>S1 Max</strong><small>标准版</small><i>↗</i></span></label>
+          <label><input type="radio" name="product" value="S1 Max 上下水版"><span><b>05</b><strong>S1 Max</strong><small>上下水版</small><i>↗</i></span></label>
+        </div>
+        <label class="journey-field">活动<input id="campaign" name="campaign" maxlength="20" value="双 11" placeholder="例如：双 11"></label>
+      </div>
+      <div class="journey-panel" data-panel="1" hidden><div class="journey-copy"><h3>想让谁<br>停下来</h3><p>描述使用产品的人，也可以说说他们在意什么。</p></div>
+        <label class="journey-field">目标人群 <span aria-hidden="true">*</span><textarea id="audience" name="audience" required maxlength="60" placeholder="例如：养猫的上班族，希望打扫更省心"></textarea><small class="journey-counter"><span id="count">0</span> / 60</small></label>
+        <div class="journey-chips"><span>来点灵感</span><button type="button" data-example="养猫的上班族，希望打扫更省心">养宠人群 ↗</button><button type="button" data-example="照顾孩子的家长，希望有更多陪伴时间">亲子家庭 ↗</button><button type="button" data-example="独居年轻人，希望保持家里干净整洁">独居生活 ↗</button></div>
+      </div>
+      <div class="journey-panel" data-panel="2" hidden><div class="journey-copy"><h3>让想法<br>以什么形式出现</h3><p>选择输出形式，为创作准备相应素材。</p></div>
+        <div class="journey-wants" role="radiogroup" aria-label="输出形式">
+          <label><input type="radio" name="want" value="文案 + 配图 + 视频" checked><span><b>01</b><strong>文案 + 配图 + 视频</strong><i>↗</i></span></label>
+          <label><input type="radio" name="want" value="文案 + 配图"><span><b>02</b><strong>文案 + 配图</strong><i>↗</i></span></label>
+          <label><input type="radio" name="want" value="只要文案"><span><b>03</b><strong>只要文案</strong><i>↗</i></span></label>
+        </div>
+        <label class="journey-field" id="shot-wrap">视频镜头要求 <small>选填</small><textarea id="shot" name="shot" maxlength="500" placeholder="描述场景、镜头与节奏"></textarea><small class="journey-counter"><span id="shot-count">0</span> / 500</small></label>
+        <label class="journey-field">口令 <span aria-hidden="true">*</span><input type="password" id="access-code" name="access" required autocomplete="current-password" placeholder="请输入访问口令"></label>
+      </div>
+      <div class="journey-panel" data-panel="3" hidden><div class="journey-copy"><h3>一个想法<br>正在成形</h3><p>确认需求后，即可开始生成。</p></div><div class="journey-summary" id="summary"></div><div class="journey-result" id="empty-result"><strong>接下来，是创造的时刻</strong><p>确认需求后，点击生成。</p></div><div class="generation-progress" id="progress" hidden role="status" aria-live="polite"><strong id="progress-title">正在提交你的创作需求</strong><p id="progress-detail">正在启动工作流，请稍候。</p><p>已等待 <span id="elapsed">0</span> 秒</p></div><p class="run-info" id="run-info" hidden></p><div id="results" class="generated-results" aria-live="polite"></div><button type="button" id="check-result" class="journey-prev" hidden>再次查询结果</button></div>
+      <div class="journey-actions"><button type="button" id="prev" class="journey-prev" hidden>← 上一步</button><span class="journey-count" id="stepcount">01 / 04</span><button type="button" id="next" class="journey-next specular-button"><canvas class="specular-button__light" aria-hidden="true"></canvas><span class="specular-button__label" id="next-label">下一步</span><span class="specular-button__label" aria-hidden="true">↗</span></button></div>
+      <p id="form-note" class="journey-note" role="status" aria-live="polite"></p>
+    </form></div></div>
+  </div>
+</section></main>
+<div class="flash" aria-hidden="true"></div><span class="sr" role="status" aria-live="polite" id="announce"></span></div></body></html>
